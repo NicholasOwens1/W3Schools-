@@ -32,15 +32,24 @@ public class FiftyExercises {
         return 0;
     }
 
-    static int multiply() {
+    static String multiply() {
         Scanner scanner = new Scanner(System.in);
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
-        return num1*num2;
+        int product = num1*num2;
+        return String.format("%d + %d = %d", num1, num2, product);
     }
 
+//    static int options() {
+//        Scanner scanner = new Scanner(System.in);
+//        int num1 = scanner.nextInt();
+//        int num2 = scanner.nextInt();
+//        int
+//        System.out.println("%d + %d = %d", num1, num2, num1+num2);
+//    }
 
     public static void main(String[] args) {
+        System.out.println(multiply());
     }
 
 }
