@@ -68,14 +68,22 @@ public class FiftyExercises {
 //        Loop 10 times, multiply the given number by each number from 1 to 10. Use String.format to type less code.
         for (int i = 0; i <= 10; i++) {
             int product = num * i;
-            System.out.println(String.format("%d * %d = %d", num, i, product));
+            System.out.printf("%d * %d = %d%n", num, i, product);
         }
+        return "";
+    }
+
+    static String java() {
+        System.out.println("   J    a   v     v  a     ");
+        System.out.println("   J   a a   v   v  a a      ");
+        System.out.println("J  J  aaaaa   V V  aaaaa      ");
+        System.out.println(" JJ  a     a   V  a     a");
         return "";
     }
 
 
     public static void main(String[] args) {
-        multiples();
+        java();
     }
 
 }
