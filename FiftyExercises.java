@@ -37,19 +37,32 @@ public class FiftyExercises {
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
         int product = num1*num2;
-        return String.format("%d + %d = %d", num1, num2, product);
+        return String.format("%d * %d = %d", num1, num2, product);
     }
 
-//    static int options() {
-//        Scanner scanner = new Scanner(System.in);
-//        int num1 = scanner.nextInt();
-//        int num2 = scanner.nextInt();
-//        int
-//        System.out.println("%d + %d = %d", num1, num2, num1+num2);
-//    }
+    static String options() {
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int sum = num1+num2;
+        int difference = num1-num2;
+        int product = num1*num2;
+        int quotient = num1/num2;
+        int remainder = num1%num2;
+        return String.format(
+                "%d + %d = %d \n" +
+                "%d - %d = %d\n" +
+                "%d * %d = %d\n" +
+                "%d / %d = %d\n" +
+                "%d mod %d = %d",
+                num1, num2, sum,
+                num1, num2, difference,
+                num1, num2, product,
+                num1, num2, quotient,
+                num1, num2, remainder);
+    }
 
     public static void main(String[] args) {
-        System.out.println(multiply());
     }
 
 }
