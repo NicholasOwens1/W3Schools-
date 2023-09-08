@@ -21,14 +21,14 @@ public class FiftyExercises {
         Scanner scanner = new Scanner(System.in);
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
-        return num1/num2;
+        return num1 / num2;
     }
 
     static int problems() {
         System.out.println(-5 + 8 * 6);
-        System.out.println((55+9)%9);
-        System.out.println(20+-3*5/8);
-        System.out.println(5+15/3*2-8%3);
+        System.out.println((55 + 9) % 9);
+        System.out.println(20 + -3 * 5 / 8);
+        System.out.println(5 + 15 / 3 * 2 - 8 % 3);
         return 0;
     }
 
@@ -36,7 +36,7 @@ public class FiftyExercises {
         Scanner scanner = new Scanner(System.in);
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
-        int product = num1*num2;
+        int product = num1 * num2;
         return String.format("%d * %d = %d", num1, num2, product);
     }
 
@@ -44,17 +44,17 @@ public class FiftyExercises {
         Scanner scanner = new Scanner(System.in);
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
-        int sum = num1+num2;
-        int difference = num1-num2;
-        int product = num1*num2;
-        int quotient = num1/num2;
-        int remainder = num1%num2;
+        int sum = num1 + num2;
+        int difference = num1 - num2;
+        int product = num1 * num2;
+        int quotient = num1 / num2;
+        int remainder = num1 % num2;
         return String.format(
                 "%d + %d = %d \n" +
-                "%d - %d = %d\n" +
-                "%d * %d = %d\n" +
-                "%d / %d = %d\n" +
-                "%d mod %d = %d",
+                        "%d - %d = %d\n" +
+                        "%d * %d = %d\n" +
+                        "%d / %d = %d\n" +
+                        "%d mod %d = %d",
                 num1, num2, sum,
                 num1, num2, difference,
                 num1, num2, product,
@@ -62,7 +62,20 @@ public class FiftyExercises {
                 num1, num2, remainder);
     }
 
+    static String multiples() {
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+//        Loop 10 times, multiply the given number by each number from 1 to 10. Use String.format to type less code.
+        for (int i = 0; i <= 10; i++) {
+            int product = num * i;
+            System.out.println(String.format("%d * %d = %d", num, i, product));
+        }
+        return "";
+    }
+
+
     public static void main(String[] args) {
+        multiples();
     }
 
 }
