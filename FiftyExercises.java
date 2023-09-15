@@ -81,9 +81,34 @@ public class FiftyExercises {
         return "";
     }
 
+    static double compute() {
+        System.out.println(((25.5 * 3.5 - 3.5 * 3.5) / (40.5 - 4.5)));
+        return 0;
+    }
+
+    static double formuoli() {
+        System.out.println(4.0 * (1 - (1.0/3) + (1.0/5) - (1.0/7) + (1.0/9) - (1.0/11)));
+        return 0;
+    }
+
+    static double ravioli() {
+        System.out.println(4.0 * (1 - (1.0/3) + (1.0/5) - (1.0/7) + (1.0/9) - (1.0/11)));
+        return 0;
+    }
+
+    static String circle(double radius) {
+        double perimeter = radius * 2 * Math.PI;
+        double area = Math.pow(radius, 2)  * Math.PI;
+        return String.format("Perimeter = %f \nArea = %f", perimeter, area);
+    }
+
+    static double average(double num1, double num2, double num3){
+        return (num1+num2+num3) / 3;
+    }
 
     public static void main(String[] args) {
-        java();
+        System.out.println(circle(5));
     }
+
 
 }
