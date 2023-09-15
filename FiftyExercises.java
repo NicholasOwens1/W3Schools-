@@ -106,8 +106,27 @@ public class FiftyExercises {
         return (num1+num2+num3) / 3;
     }
 
+    static String rectangle(double width, double height) {
+        double perimeter = (width * 2)  + (height * 2);
+        double area = width * height;
+        return String.format("Perimeter = %f \nArea = %f", perimeter, area);
+    }
+
+    static String merica(){
+        for(int i = 0; i < 4; i++) {
+            System.out.println("* * * * * * ==================================\n" +
+                    " * * * * *  ==================================");
+        }
+        System.out.println("* * * * * * ==================================");
+        for(int i = 0; i < 6; i++){
+            System.out.println("==============================================");
+        }
+        return "";
+    }
+
     public static void main(String[] args) {
-        System.out.println(circle(5));
+        System.out.println(merica());
+        ;
     }
 
 
