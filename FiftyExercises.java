@@ -124,9 +124,27 @@ public class FiftyExercises {
         return "";
     }
 
+    static String change(int input1, int input2) {
+        int num = input1;
+        input1 = input2;
+        input2 = num;
+        System.out.println(input1);
+        System.out.println(input2);
+        return "";
+    }
+
+    static String face(){
+        System.out.println(" +\"\"\"\"\"+");
+        System.out.println("[| o o |]");
+        System.out.println(" |  ^  |");
+        System.out.println(" | '-' |");
+        System.out.println(" +-----+");
+        return "";
+    }
+
     public static void main(String[] args) {
-        System.out.println(merica());
-        ;
+        System.out.println(face());
+
     }
 
 
