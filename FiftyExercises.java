@@ -142,8 +142,14 @@ public class FiftyExercises {
         return "";
     }
 
+    static String binarysum(String num1, String num2) {
+        int sum = Integer.parseInt(num1, 2) + Integer.parseInt(num2, 2);
+        String answer = Integer.toBinaryString(sum);
+        return answer;
+    }
+
     public static void main(String[] args) {
-        System.out.println(face());
+        System.out.println(binarysum("10","11"));
 
     }
 
