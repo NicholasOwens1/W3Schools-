@@ -142,15 +142,25 @@ public class FiftyExercises {
         return "";
     }
 
-    static String binarysum(String num1, String num2) {
+    static String binarySum(String num1, String num2) {
         int sum = Integer.parseInt(num1, 2) + Integer.parseInt(num2, 2);
         String answer = Integer.toBinaryString(sum);
         return answer;
     }
 
-    public static void main(String[] args) {
-        System.out.println(binarysum("10","11"));
+    static String binaryProduct(String num1, String num2) {
+        int product = Integer.parseInt(num1, 2) * Integer.parseInt(num2, 2);
+        String answer = Integer.toBinaryString(product);
+        return answer;
+    }
 
+    static String converter(int num) {
+        String y = Integer.toBinaryString(num);
+        return y;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(converter(5));
     }
 
 
