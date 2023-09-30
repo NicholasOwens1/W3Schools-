@@ -159,8 +159,18 @@ public class FiftyExercises {
         return y;
     }
 
+    static String hex(int num) {
+        String y = Integer.toHexString(num);
+        return y;
+    }
+
+    static String octal(int num) {
+        String y = Integer.toOctalString(num);
+        return y;
+    }
+
     public static void main(String[] args) {
-        System.out.println(converter(5));
+        System.out.println(octal(15));
     }
 
 
