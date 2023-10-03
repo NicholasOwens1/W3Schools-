@@ -232,11 +232,30 @@ public class FiftyExercises {
         System.out.println("Java home: " + System.getProperty("java.home"));
         System.out.println("Java vendor: " + System.getProperty("java.vendor"));
         System.out.println("Java class path: " + System.getProperty("java.class.path"));
-
         return;
     }
+
+    static String compare(int num1, int num2) {
+        if (num1 == num2) {
+            System.out.printf("%d == %d\n", num1, num2) ;
+        }
+        System.out.printf("%d != %d\n", num1, num2);
+
+        if (num1 > num2){
+            System.out.printf("%d > %d\n", num1, num2);
+        }
+        System.out.printf("%d < %d\n", num1, num2);
+
+        if (num1 > num2){
+            System.out.printf("%d >= %d", num1, num2);
+        }
+        System.out.printf("%d <= %d", num1, num2);
+        return "";
+    }
+
+
     public static void main(String[] args) {
-        javaChecker();
+        compare(25, 39);
     }
 
 
