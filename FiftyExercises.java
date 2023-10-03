@@ -214,14 +214,29 @@ public class FiftyExercises {
         return z;
     }
 
-    static String hexTiBinary(String num) {
+    static String hexToBinary(String num) {
         int b = Integer.parseInt(num, 16);
         String z = Integer.toBinaryString(b);
         return z;
     }
 
+    static String hextToOctal(String num) {
+        int b = Integer.parseInt(num, 16);
+        String z = Integer.toOctalString(b);
+        return z;
+    }
+
+    static void javaChecker() {
+        System.out.println("Java version: " + System.getProperty("java.version"));
+        System.out.println("Java runtime version: " + System.getProperty("java.runtime.version"));
+        System.out.println("Java home: " + System.getProperty("java.home"));
+        System.out.println("Java vendor: " + System.getProperty("java.vendor"));
+        System.out.println("Java class path: " + System.getProperty("java.class.path"));
+
+        return;
+    }
     public static void main(String[] args) {
-        System.out.println(hexTiBinary("37"));
+        javaChecker();
     }
 
 
