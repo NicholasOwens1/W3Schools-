@@ -1,3 +1,4 @@
+import java.sql.Array;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -253,9 +254,26 @@ public class FiftyExercises {
         return "";
     }
 
+    static int sumOfDigits(int num) {
+        String numString = Integer.toString(num);
+//        split string into individual values
+        String[] arr = numString.split("");
+//        set a starting number
+        int x = 0;
+//      add up the numbers each placw in the array
+        for (int i = 0; i < arr.length; i++) {
+            x += Integer.parseInt(arr[i]);
+        }
+        return x;
+    }
+
+    static double hexArea(int side) {
+        double area = (6 * Math.pow(side, 2)) / (4 * Math.tan(Math.PI/6));
+        return area;
+    }
 
     public static void main(String[] args) {
-        compare(25, 39);
+        System.out.println(hexArea(6));
     }
 
 
