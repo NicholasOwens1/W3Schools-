@@ -149,6 +149,7 @@ public class FiftyExercises {
     }
 
     static String binaryProduct(String num1, String num2) {
+//      Turns both inputs into
         int product = Integer.parseInt(num1, 2) * Integer.parseInt(num2, 2);
         String answer = Integer.toBinaryString(product);
         return answer;
@@ -169,8 +170,58 @@ public class FiftyExercises {
         return y;
     }
 
+    static String binaryToDecimal(String num) {
+        int y = Integer.parseInt(num, 2);
+        String z = Integer.toString(y);
+        return z;
+    }
+
+    static String binaryToHexadecimal(String num) {
+        int y = Integer.parseInt(num, 2);
+        String z = Integer.toHexString(y);
+        return z;
+    }
+
+    static String binaryToOctal(String num) {
+        int y = Integer.parseInt(num, 2);
+        String z = Integer.toOctalString(y);
+        return z;
+    }
+
+    static String octalToDecimal(String num) {
+        int y = Integer.parseInt(num, 8);
+        String z = Integer.toString(y);
+        return z;
+    }
+
+    static String octalToBinary(String num) {
+        int y = Integer.parseInt(num, 8);
+        String z = Integer.toBinaryString(y);
+        return z;
+    }
+
+    static String octalToHex(String num) {
+//        Octal to decimal
+        int y = Integer.parseInt(num, 8);
+//        Decimal to Hexadecimal
+        String z = Integer.toHexString(y);
+        return z;
+    }
+
+    static String hexToDecimal(String num) {
+        int b = Integer.parseInt(num, 16);
+        String z = Integer.toString(b);
+        return z;
+    }
+
+    static String hexTiBinary(String num) {
+        int b = Integer.parseInt(num, 16);
+        String z = Integer.toBinaryString(b);
+        return z;
+    }
+
     public static void main(String[] args) {
-        System.out.println(octal(15));
+        System.out.println(hexTiBinary("37"));
     }
 
 
