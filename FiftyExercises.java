@@ -268,12 +268,19 @@ public class FiftyExercises {
     }
 
     static double hexArea(int side) {
-        double area = (6 * Math.pow(side, 2)) / (4 * Math.tan(Math.PI/6));
+//       declare a double with the value of the formula for hexagon area
+        double area = (6 * Math.pow(side, 2)) / (4 * (Math.tan(Math.PI/6)));
         return area;
     }
 
+    static double polygonArea(int sideNumber, int sideLength) {
+        double area = (sideNumber * Math.pow(sideLength, 2)) / (4 * (Math.tan(Math.PI / sideNumber)));
+        return area;
+    }
+
+//    Area of a polygon = (n*s^2)/(4*tan(π/n))
     public static void main(String[] args) {
-        System.out.println(hexArea(6));
+        System.out.println(polygonArea(7,6));
     }
 
 
