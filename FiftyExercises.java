@@ -278,10 +278,55 @@ public class FiftyExercises {
         return area;
     }
 
-//    Area of a polygon = (n*s^2)/(4*tan(π/n))
-    public static void main(String[] args) {
-        System.out.println(polygonArea(7,6));
+    static double pointDistance(double lat1, double long1, double lat2, double long2) {
+        lat1 = Math.toRadians(lat1);
+        long1 = Math.toRadians(long1);
+        lat2 = Math.toRadians(lat2);
+        long2 = Math.toRadians(long2);
+        double distance = 6371.01 * Math.acos(Math.sin(lat1) * Math.sin(lat2) + Math.cos(lat1) * Math.cos(lat2) * Math.cos(long1 - long2));
+        return distance;
+    }
+//    Distance between the two points [ (x1,y1) & (x2,y2)]
+//d = radius * arccos(sin(x1) * sin(x2) + cos(x1) * cos(x2) * cos(y1 - y2))
+//Radius of the earth r = 6371.01 Kilometers
+
+    static String reverse(String input){
+//        loop backwards outputting each character in the string
+        String reversed = "";
+        for (int i = input.length()-1; i >= 0; i--){
+            char ch = input.charAt(i);
+            reversed += ch;
+        }
+        return reversed;
     }
 
+    static String count(String string){
+//        Loop through the string checking the properties of each character,
+//        create a counter for each char type. Increase the respective counter by 1
+        int letters = 0;
+        int spaces = 0;
+        int numbers = 0;
+        int other = 0;
+        for (int i = 0; i < string.length(); i++) {
+           char index = string.charAt(i);
+            if (Character.isAlphabetic(string.charAt(i))) {
+                letters += 1;
+            }
+            else if (String.valueOf(index).equals(" ")){
+                spaces += 1;
+            }
+            else if (Character.isDigit(index)) {
+                numbers += 1;
+            }
+            else other += 1;
+        }
+        return String.format("The number of letters is %s\n" +
+                "The number of spaces is %s\n" +
+                "The number of numbers is %s\n" +
+                "The number of other characters is %s\n", letters, spaces, numbers, other);
+    }
 
+    public static void main(String[] args) {
+        System.out.println(count("a *2"));
+    }
 }
