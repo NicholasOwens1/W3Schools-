@@ -1,6 +1,4 @@
 import java.nio.charset.Charset;
-import java.sql.Array;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class FiftyExercises {
@@ -331,10 +329,16 @@ public class FiftyExercises {
         for (String str : Charset.availableCharsets().keySet()) {
             System.out.println(str);
         }
-        return ""
-;    }
+        return "";
+    }
+
+    public static int ascii(char input) {
+        return (char) input;
+    }
+
+
 
     public static void main(String[] args) {
-        System.out.println(charsets());
+        System.out.println(ascii('Z'));
     }
 }
