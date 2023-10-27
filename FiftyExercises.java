@@ -1,3 +1,4 @@
+import java.nio.charset.Charset;
 import java.sql.Array;
 import java.sql.SQLOutput;
 import java.util.Scanner;
@@ -326,7 +327,14 @@ public class FiftyExercises {
                 "The number of other characters is %s\n", letters, spaces, numbers, other);
     }
 
+    public static String charsets() {
+        for (String str : Charset.availableCharsets().keySet()) {
+            System.out.println(str);
+        }
+        return ""
+;    }
+
     public static void main(String[] args) {
-        System.out.println(count("a *2"));
+        System.out.println(charsets());
     }
 }
