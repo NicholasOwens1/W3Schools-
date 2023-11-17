@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.nio.charset.Charset;
 import java.util.Scanner;
 
@@ -336,9 +337,21 @@ public class FiftyExercises {
         return (char) input;
     }
 
+    public static String password(String password){
+//        Declare console variable
+        Console cons;
+
+        if ((cons = System.console()) != null) {
+            char[] pass_word = null;
+            )
+        }
+
+    return "";
+    }
+
 
 
     public static void main(String[] args) {
-        System.out.println(ascii('Z'));
+        System.out.println(count( "njkn  oijio"));
     }
 }
