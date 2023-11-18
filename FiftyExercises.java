@@ -340,10 +340,20 @@ public class FiftyExercises {
     public static String password(String password){
 //        Declare console variable
         Console cons;
-
+//    Check to see if system console is available
         if ((cons = System.console()) != null) {
             char[] pass_word = null;
-            )
+
+            try {
+                // Prompt user to input password
+                pass_word = cons.readPassword("Enter Password");
+
+                System.out.println("Your password is" + new String(pass_word));
+            } finally {
+                if (pass_word == null) {
+                    java.util.Arrays.fill(pass_word, ' ');
+                }
+            }
         }
 
     return "";
